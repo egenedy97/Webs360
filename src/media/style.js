@@ -18,4 +18,12 @@ const size = {
     desktop: `(min-width: ${size.desktop})`,
     desktopL: `(min-width: ${size.desktop})`
   };
+
+
+  export const color = {
+    green:'#024d4c' , 
+    white :'#FFF' , 
+    lightGreen:'#008174' , 
+    black :'#000000'
+  }
   

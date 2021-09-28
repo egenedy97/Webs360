@@ -27,7 +27,8 @@ const size = {
     white :'#FFF' , 
     lightGreen:'#008174' , 
     black :'#000000',
-    lightBlue:'#337ab7'
+    lightBlue:'#337ab7',
+    lightBlack:'#333333'
   }
   
   

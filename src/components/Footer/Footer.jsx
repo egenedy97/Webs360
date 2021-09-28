@@ -1,11 +1,10 @@
 import React from "react";
 import { StyledFooter, MainFooter, LeftText, LogoFooter, IconSpan, icons, TextCenter ,UList, RightText , StyleFont ,StrongFont } from './Style'
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <Router>
             <StyledFooter>
                 <MainFooter>
                     <LeftText>
@@ -55,7 +54,6 @@ const Footer = () => {
 
                 </MainFooter>
             </StyledFooter>
-        </Router>
     )
 }
 

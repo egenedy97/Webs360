@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 const size = {
     mobileS: '320px',
     mobileM: '375px',
@@ -24,6 +26,53 @@ const size = {
     green:'#024d4c' , 
     white :'#FFF' , 
     lightGreen:'#008174' , 
-    black :'#000000'
+    black :'#000000',
+    lightBlue:'#337ab7'
   }
   
+  
+export const Container = styled.div`
+
+@media ${device.mobileS}
+{
+    width:750px ;
+   
+
+}
+@media ${device.mobileM}
+{
+    width:750px ;
+   
+
+}
+@media ${device.mobileL}
+{
+    width:750px ;
+   
+}
+
+@media ${device.tablet}
+{
+    width:970px ;
+    
+
+}
+
+
+@media ${device.laptop}{
+    width:1170px ;
+     
+
+}
+
+@media ${device.laptopL}{
+    width:1170px ;
+    
+
+}
+
+padding :0px 15px 0px 15px ; 
+justify-content : center; 
+
+`
+

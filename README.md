@@ -13,3 +13,7 @@ yarn install
 ```
 yarn start 
 ```
+## Start Backend Server 
+```
+json-server --watch db.json
+```

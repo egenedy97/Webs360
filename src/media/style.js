@@ -4,7 +4,7 @@ const size = {
     mobileS: '320px',
     mobileM: '375px',
     mobileL: '425px',
-    tablet: '768px',
+    tablet: '650px',
     laptop: '1024px',
     laptopL: '1440px',
     desktop: '2560px'
@@ -33,6 +33,7 @@ const size = {
   
   
 export const Container = styled.div`
+
 
 @media ${device.mobileS}
 {
@@ -71,9 +72,7 @@ export const Container = styled.div`
     
 
 }
-
-padding :0px 15px 0px 15px ; 
-justify-content : center; 
+padding : 0% 8%; 
 
 `
 

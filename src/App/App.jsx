@@ -1,20 +1,32 @@
 import React from 'react'
+import {Container} from '../media/style'
 import { Header } from './style'
-import { Container } from '../media/style';
 import Footer from '../components/Footer/Footer';
 import Tools from '../components/Tools/Tool';
-function App() {
+import CategoryItems from '../Pages/CategoryItems/CategoryItems';
+import CategoryPage from '../Pages/CategoryPages/CategoryPage';
+import ImagePage from '../Pages/ImagePage/ImagePage';
+import { Route, Switch } from 'react-router';
+import Navbar from '../components/Navbar/Navbar';
+const App= ()=> {
+ 
   return (
     <>
-      <Header>
+     <Header>
+       <Navbar/>
         <Container>
-          <p> this is my header man </p>
+          <Switch>
+            <Route exact path='/category' component={CategoryPage}/>
+            <Route  path='/category/:category_id' component={CategoryItems}/>
+            <Route path='/photos/asdfas' component={ImagePage} />
+          </Switch>
         </Container>
-      </Header>
-      <Tools />
-      <Footer />
+     </Header>
+     <Tools></Tools>
+     <Footer>
+       
+     </Footer>
     </>
   );
 }
-
 export default App;

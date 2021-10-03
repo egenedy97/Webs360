@@ -33,46 +33,7 @@ const size = {
   
   
 export const Container = styled.div`
-
-
-@media ${device.mobileS}
-{
-    width:750px ;
-   
-
-}
-@media ${device.mobileM}
-{
-    width:750px ;
-   
-
-}
-@media ${device.mobileL}
-{
-    width:750px ;
-   
-}
-
-@media ${device.tablet}
-{
-    width:970px ;
-    
-
-}
-
-
-@media ${device.laptop}{
-    width:1170px ;
-     
-
-}
-
-@media ${device.laptopL}{
-    width:1170px ;
-    
-
-}
-padding : 0% 8%; 
+margin :50px 10% ;
 
 `
 

@@ -1,12 +1,22 @@
 import styled from "styled-components";
 import { color, device } from "../../media/style";
 // import { device } from "../../media/style";
+import Slider from "react-slick";
 
+export const ThisSlider = styled(Slider)`
+    background-color :white  ; 
+    
+    max-height : 140px ; 
+    `
+
+
+export const SliderDiv = styled.div`
+   
+`
 export const SearchDiv = styled.div`
     justify-content : align-center ; 
     width:100% ; 
     display:grid ; 
-   margin-top:300px;
     grid-gap : 0px 5%  ; 
     grid-template-columns: 1fr 1fr; 
     padding:0% 1% ; 

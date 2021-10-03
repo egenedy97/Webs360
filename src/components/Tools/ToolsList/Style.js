@@ -6,10 +6,23 @@ export const Container2 = Styled.div`
     margin :0% 5% 0px 5% ; 
     display: grid;  
     justify-content: space-between ; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); 
+   
     gap: 20px 10px;
     flex-direction: row ;
+    @media ${device.mobileL}
+{
+    font-size:16px; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); 
+   
+}
+@media ${device.tablet}
+{
+    font-size:18px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); 
+   
+}
 `
 
 
@@ -23,8 +36,6 @@ export const Cell = Styled.div`
 export const ImageDiv = Styled.div`
     margin:0% 2% 0% 2% ; 
     width:20%;
-    flex-direction : column ; 
-    align-content : center ; 
     vertical-align: middle ;
     
 `
@@ -55,9 +66,6 @@ color:${color.lightBlack} ;
     font-size:18px; 
    
 }
-
-
-
 `
 
 export const ContentTool = Styled.p`

@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+    import Styled from "styled-components";
 import { device } from "../../media/style";
 
 export const TitleText = Styled.div`
@@ -8,7 +8,6 @@ export const TitleText = Styled.div`
 export const Header = Styled.div`
 width:100%  ; 
 justify-content : center; 
-display: flex;
 padding : 100px 0px 100px 0px ;
 
 `

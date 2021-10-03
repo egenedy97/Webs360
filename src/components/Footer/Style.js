@@ -1,74 +1,88 @@
 import Styled from 'styled-components'
-import { color } from '../../media/style'
-// import { device } from '../../media/style'
+import { color } from '../../media/style';
+import { device } from '../../media/style';
+
 export const StyledFooter = Styled.div`
     background-color :${color.black} ; 
-    display : table; 
     font-family:lato, sans-serif ; 
     width :100% ; 
     line-height:20px ; 
-    padding : 10px 100px 10px 15px ; 
     color:white ; 
-    justify-content:space-between;
-    flex-direction:row; 
+    items-align :center; 
+    padding-right : 10%;
     
 `
 
 export const MainFooter = Styled.div`
 background-color: ${color.black};
-width: 100%;
-display:table-row; 
+width:100%
 
+@media ${device.tablet}
+{
+    display:grid; 
+grid-template-columns: repeat(auto-fit, minmax(33.3%, 1fr));
+grid-template-rows: repeat(auto-fit, minmax(80px, 1fr)); 
+justify-content: space-between ; 
+}
+
+@media ${device.mobileL}
+{
+    display:grid; 
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-rows: repeat(auto-fit, minmax(80px, 1fr)); 
+justify-content: space-between ; 
+}
 
 `
 
 export const LeftText = Styled.div`
-    display : inline-block 
-    color :${color.white};
-    width : 33% ;
-    display:table-cell; 
-    text-align:justify ;
     
-
+    color :${color.white};
+    display: flex ; 
+    flex-direction :column; 
+    padding-left : 5% ;
+    
 `
 
 export const LogoFooter = Styled.h1`
-    font-weight : 500px ;
-    font-family:lato, sans-serif ; 
-    font-size : 20px ;    
-    color:inherit ; 
+        font-family:lato, sans-serif ; 
+    font-size : 20px ;  
+  
 `
 
 export const IconSpan = Styled.span`
     margin-right :1% ;
 `
 
-export const icons = {
-    color: color.white
-}
-
 export const TextCenter = Styled.div`
-    display: inline-block ; 
-    width:33% ; 
+display: flex ; 
+
     font-size:10px ; 
     font-weight: 100 ; 
     color:${color.white} ; 
-    position:relative ; 
     margin:auto ; 
     text-align : center ; 
     font-family:lato, sans-serif ; 
-    display:table-cell; 
     vertical-align:bottom;
+
+
 `
 
+
 export const RightText = Styled.div`
-display: inline-block ; 
-width:33% ; 
-position:relative ; 
-display:table-cell;
 text-decoration:none ;
+text-align: right;
 vertical-align:bottom;
+
+
 `
+
+
+
+
+export const icons = {
+    color: color.white
+}
 
 export const StyleFont = Styled.li`
     color:${color.white};
@@ -80,6 +94,8 @@ export const StyleFont = Styled.li`
     font-weight: 100 ;
     align-self: flex-end;
 `
+
+
 export const StrongFont = Styled.strong`
     color:${color.lightBlue} ; 
 `

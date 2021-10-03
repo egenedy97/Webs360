@@ -3,20 +3,29 @@ import { createSlice } from "@reduxjs/toolkit";
 export const imageSlice = createSlice({
     name : "image" , 
     initialState:{
-        images:[]
+        images:[] , 
+        relatedImage:[] ,
+        currentPage:1
     },
     reducers:{
-        fetchImages :(state , action)=>{
+        fetchImagesPage :(state , action)=>{
             return {
-                todos:action.payload
+                ...state , 
+                images:action.payload.images , 
+                currentPage : action.payload.page 
             }
         },
-        searchImages : (state, action ,data)=>{
+        searchImages : (state, action)=>{
             return { 
                 ...state , 
-                images:state.images.filter((element)=>{
-                    return element.name.includes(data) ;
-                })
+                images:action.payload.images
+            }
+        },
+        fetchOnImage: (state , action )=>{
+            return {
+                ...state,
+                images:action.payload.images, 
+                relatedImage:action.payload.relatedImage
             }
         }
     }
@@ -24,3 +33,4 @@ export const imageSlice = createSlice({
 
 
 export default imageSlice ; 
+export const {  fetchImagesPage , searchImages , fetchOnImage} = imageSlice.actions ;
